@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="fa">
+
 <head>
 
 <meta charset="utf-8">
@@ -7,4 +9,111 @@
 
 <title>A.H.K CLUB</title>
 
+<style>
+
+body{
+background:#0b0b0b;
+color:white;
+font-family:tahoma;
+direction:rtl;
+}
+
+h1{
+color:#a855f7;
+text-align:center;
+font-size:40px;
+}
+
+.search{
+text-align:center;
+margin:20px;
+}
+
+input{
+width:70%;
+padding:15px;
+border-radius:20px;
+background:#111;
+color:white;
+border:2px solid #a855f7;
+}
+
+li{
+list-style:none;
+background:#151515;
+margin:10px;
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 15px #7c00ff;
+}
+
+</style>
+
 </head>
+
+
+<body>
+
+<h1>🎮 A.H.K CLUB</h1>
+
+<div class="search">
+<input id="search" placeholder="🔍 سرچ بازی">
+</div>
+
+
+<ul id="games">
+
+<li>Red Dead Redemption 2 - 110 GB</li>
+<li>GTA V - 56 GB</li>
+<li>Detroit: Become Human - 48 GB</li>
+<li>Resident Evil 6 - 18 GB</li>
+<li>Battlefield 1 Revolution - 76 GB</li>
+<li>Battlefield V - 70 GB</li>
+<li>Guardians of the Galaxy - 58 GB</li>
+<li>Tomb Raider - 20 GB</li>
+<li>Rise of the Tomb Raider - 25 GB</li>
+<li>Shadow of the Tomb Raider - 30 GB</li>
+<li>Borderlands 3 - 75 GB</li>
+<li>Ghost of Tsushima - 70 GB</li>
+<li>Days Gone - 70 GB</li>
+<li>Far Cry 3 - 25 GB</li>
+<li>Far Cry 4 - 40 GB</li>
+<li>Far Cry 5 - 60 GB</li>
+<li>Far Cry 6 - 80 GB</li>
+<li>Batman Arkham Knight - 55 GB</li>
+<li>Cyberpunk 2077 - 90 GB</li>
+<li>The Witcher 3 - 50 GB</li>
+<li>God of War - 70 GB</li>
+<li>Spider-Man Remastered - 75 GB</li>
+<li>The Last of Us Part I - 100 GB</li>
+<li>Dying Light 2 - 60 GB</li>
+<li>Forza Horizon 5 - 160 GB</li>
+<li>Hogwarts Legacy - 85 GB</li>
+
+</ul>
+
+
+<script>
+
+let search=document.getElementById("search");
+let games=document.querySelectorAll("#games li");
+
+search.onkeyup=function(){
+
+let text=search.value.toLowerCase();
+
+games.forEach(game=>{
+
+game.style.display =
+game.innerText.toLowerCase().includes(text)
+?"block":"none";
+
+});
+
+}
+
+</script>
+
+
+</body>
+</html>
