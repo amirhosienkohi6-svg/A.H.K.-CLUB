@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>A.H.K CLUB</title>
+
+<style>
+body{
+margin:0;
+background:#050505;
+color:white;
+font-family:tahoma;
+direction:rtl;
+}
+
+header{
+text-align:center;
+padding:25px;
+background:#180025;
+}
+
+h1{color:#b000ff;font-size:40px;}
+
+.search{
+text-align:center;
+padding:20px;
+}
+
+input{
+width:70%;
+padding:15px;
+border-radius:30px;
+background:#111;
+color:white;
+border:2px solid #a000ff;
+}
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 20px #8500ff;
+}
+
+button{
+background:#a000ff;
+color:white;
+border:0;
+padding:12px;
+border-radius:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎮 A.H.K CLUB</h1>
+<p>دانلود بازی های خفن</p>
+</header>
+
+<div class="search">
+<input id="search" placeholder="🔍 سرچ بازی...">
+</div>
+
+
+<div class="games">
+
+
+<div class="card"><h2>GTA V</h2><p>110GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Red Dead Redemption 2</h2><p>120GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Cyberpunk 2077</h2><p>70GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Forza Horizon 5</h2><p>120GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>God of War</h2><p>90GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Spider-Man Remastered</h2><p>75GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Assassin's Creed Mirage</h2><p>40GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Call of Duty MW3</h2><p>200GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>FIFA 25</h2><p>60GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Minecraft</h2><p>2GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Elden Ring</h2><p>60GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Resident Evil 4</h2><p>70GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Hogwarts Legacy</h2><p>85GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Need For Speed Heat</h2><p>50GB</p><button>دانلود</button></div>
+
+<div class="card"><h2>Far Cry 6</h2><p>80GB</p><button>دانلود</button></div>
+
+
+</div>
+
+
+<script>
+let search=document.getElementById("search");
+let cards=document.querySelectorAll(".card");
+
+search.onkeyup=function(){
+
+let text=search.value.toLowerCase();
+
+cards.forEach(card=>{
+
+card.style.display=
+card.innerText.toLowerCase().includes(text)
+?"block":"none";
+
+});
+
+}
+</script>
+
+
+</body>
+</html>
